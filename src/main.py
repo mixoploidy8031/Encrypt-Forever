@@ -21,14 +21,11 @@ def create_btc_address_file(directory):
 
 # Secure file deletion (overwrite and remove)
 def secure_delete(file_path, passes=8):
-    # Overwrite the file with random data for 'passes' number of times
     with open(file_path, 'r+b') as f:
         length = os.path.getsize(file_path)
         for _ in range(passes):
             f.seek(0)
             f.write(bytearray(random.getrandbits(4) for _ in range(length)))
-    
-    # After overwriting, remove the file
     os.remove(file_path)
     
     # Debugging
