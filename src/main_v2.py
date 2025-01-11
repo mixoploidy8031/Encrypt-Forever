@@ -6,11 +6,8 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
 
-<<<<<<< Updated upstream
 # WARNING!! THIS VERSION IS EVEN MORE DANGEROUS THAN THE ORGINAL!
 
-=======
->>>>>>> Stashed changes
 # Generate a random key and IV
 def generate_key_and_iv():
     key = os.urandom(32) # 256-bit key (32 bytes) for AES encryption
